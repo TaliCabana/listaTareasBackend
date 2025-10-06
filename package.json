@@ -1,0 +1,13 @@
+{
+  "name": "listatareasbackend",
+  "version": "1.0.0",
+  "description": "backend de una lista de tareas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["rutas", "controlador", "BD MongoDB", "middlewares"],
+  "author": "Tali Cabana",
+  "license": "ISC",
+  "type": "module"
+}
