@@ -3,7 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import "./dbconfig" from "mongoose";
+import "./dbconfig.js"
 
 // 1- Toma un puerto
 // 2- Configura los middlewares
