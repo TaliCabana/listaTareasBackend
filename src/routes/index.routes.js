@@ -3,6 +3,6 @@ import tareasRoutes from "./tareas.routes.js";
 
 const router = Router();
     // http://localhost:3000/api/productos
-router.use('/tarea', tareasRoutes)
+router.use('/tareas', tareasRoutes)
 
 export default router;
