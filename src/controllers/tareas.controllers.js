@@ -31,7 +31,7 @@ export const listarTareas = async (req, res) => {
 
 export const obtenerTarea = async (req, res) => {
   try {
-    console.log(req.param.id);
+    console.log(req.params.id);
     const tareaBuscada = await Tarea.findById(req.params.id);
     if (!tareaBuscada) {
       return res
@@ -44,7 +44,7 @@ export const obtenerTarea = async (req, res) => {
       .status(500)
       .json({ mensaje: "Ocurrió un error al obtener la tarea" });
   }
-  res.status(200).json(tareaBuscado);
+  res.status(200).json(tareaBuscada);
 };
 
 export const borrarTareaPorId = async (req, res) => {
