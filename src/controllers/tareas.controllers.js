@@ -38,13 +38,11 @@ export const obtenerTarea = async (req, res) => {
         .status(404)
         .json({ mensaje: "No se encontó la tarea buscada" });
     }
+    res.status(200).json(tareaBuscada);
   } catch (error) {
     console.error(error);
-    res
-      .status(500)
-      .json({ mensaje: "Ocurrió un error al obtener la tarea" });
+    res.status(500).json({ mensaje: "Ocurrió un error al obtener la tarea" });
   }
-  res.status(200).json(tareaBuscada);
 };
 
 export const borrarTareaPorId = async (req, res) => {
@@ -65,10 +63,7 @@ export const borrarTareaPorId = async (req, res) => {
 
 export const editarTareaPorId = async (req, res) => {
   try {
-    const tareaBuscada = await Tarea.findByIdAndUpdate(
-      req.params.id,
-      req.body
-    );
+    const tareaBuscada = await Tarea.findByIdAndUpdate(req.params.id, req.body);
     if (!tareaBuscada) {
       return res
         .status(404)
